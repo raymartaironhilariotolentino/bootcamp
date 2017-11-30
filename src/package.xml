@@ -107,5 +107,70 @@
         <members>Position__c.Set_Close_Date_to_Today</members>
         <name>WorkflowFieldUpdate</name>
     </types>
+    <types>
+        <members>Recruiting_Reports/Avg_Days_to_Hire_With_and_Without_Travel</members>
+        <members>Recruiting_Reports/Open_Positions_by_Functional_Area_and_Re</members>
+        <members>Recruiting_Reports/Positions_Open_Longer_Than_90_Days</members>
+        <name>Report</name>
+    </types>
+    <types>
+        <members>Positions_with_Job_Applications_with_Reviews</members>
+        <name>ReportType</name>
+    </types>
+    <types>
+        <members>Position__c.Standard_Position</members>
+        <members>Position__c.IT_Position</members>
+        <name>RecordType</name>
+    </types>
+    <types>
+        <members>Applicant__c</members>
+        <members>Brand_Info__c</members>
+        <members>Candidate__c</members>
+        <members>Employment_Website__c</members>
+        <members>Interviewer__c</members>
+        <members>Job_Application__c</members>
+        <members>Job_Posting__c</members>
+        <members>Position__c</members>
+        <members>Review__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Candidate__c.Candidate_compact_layout</members>
+        <members>Job_Application__c.Job_Application</members>
+        <members>Job_Posting__c.Job_Posting_CLayout</members>
+        <members>Review__c.New_Review_CLayout</members>
+        <name>CompactLayout</name>
+    </types>
+    <types>
+        <members>Inquiry_Queue</members>
+        <members>Product_Support_Tier_1_Queue</members>
+        <members>Product_Support_Tier_2_Queue</members>
+        <members>Unclaimed_Positions_Queue</members>
+        <name>Queue</name>
+    </types>
+    <types>
+        <members>Applicant__c.All</members>
+        <members>Candidate__c.All</members>
+        <members>Employment_Website__c.All</members>
+        <members>Interviewer__c.All</members>
+        <members>Job_Application__c.All</members>
+        <members>Job_Posting__c.All</members>
+        <members>Position__c.Unclaimed_Positions_Queue_Position</members>
+        <members>Position__c.All</members>
+        <members>Review__c.All</members>
+        <name>ListView</name>
+    </types>
+    <types>
+        <members>Recruiting_Reports/Avg_Days_to_Hire_With_and_Without_Travel</members>
+        <name>HomePageLayout</name>
+    </types>
+    <types>
+        <members>Hiring_Manager</members>
+        <members>Interviewer</members>
+        <members>Recruiter</members>
+        <members>Standard_Employee</members>
+        <name>PermissionSet</name>
+    </types>
+
     <version>40.0</version>
 </Package>
