@@ -123,18 +123,6 @@
         <name>RecordType</name>
     </types>
     <types>
-        <members>Applicant__c</members>
-        <members>Brand_Info__c</members>
-        <members>Candidate__c</members>
-        <members>Employment_Website__c</members>
-        <members>Interviewer__c</members>
-        <members>Job_Application__c</members>
-        <members>Job_Posting__c</members>
-        <members>Position__c</members>
-        <members>Review__c</members>
-        <name>CustomObject</name>
-    </types>
-    <types>
         <members>Candidate__c.Candidate_compact_layout</members>
         <members>Job_Application__c.Job_Application</members>
         <members>Job_Posting__c.Job_Posting_CLayout</members>
