@@ -121,7 +121,7 @@
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Lookup</type>
+        <type>Master-Detail</type>
     </fields>
     <fields>
         <fullName>Stage__c</fullName>
@@ -192,47 +192,6 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>New</fullName>
-                    <default>true</default>
-                    <label>New</label>
-                </value>
-                <value>
-                    <fullName>Review Resume</fullName>
-                    <default>false</default>
-                    <label>Review Resume</label>
-                </value>
-                <value>
-                    <fullName>Phone Screen</fullName>
-                    <default>false</default>
-                    <label>Phone Screen</label>
-                </value>
-                <value>
-                    <fullName>Schedule Interviews</fullName>
-                    <default>false</default>
-                    <label>Schedule Interviews</label>
-                </value>
-                <value>
-                    <fullName>Extend an Offer</fullName>
-                    <default>false</default>
-                    <label>Extend an Offer</label>
-                </value>
-                <value>
-                    <fullName>Hired</fullName>
-                    <default>false</default>
-                    <label>Hired</label>
-                </value>
-                <value>
-                    <fullName>Rejected</fullName>
-                    <default>false</default>
-                    <label>Rejected</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>Total_Rating__c</fullName>
