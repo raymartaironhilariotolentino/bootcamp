@@ -47,7 +47,6 @@
         <fields>Name</fields>
         <fields>Status__c</fields>
         <fields>Candidate__c</fields>
-        <fields>Position__c</fields>
         <label>Job Application</label>
     </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
@@ -108,20 +107,6 @@
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Summary</type>
-    </fields>
-    <fields>
-        <fullName>Position__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
-        <externalId>false</externalId>
-        <label>Position</label>
-        <referenceTo>Position__c</referenceTo>
-        <relationshipLabel>Job Applications</relationshipLabel>
-        <relationshipName>Job_Applications</relationshipName>
-        <required>false</required>
-        <trackFeedHistory>false</trackFeedHistory>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Master-Detail</type>
     </fields>
     <fields>
         <fullName>Stage__c</fullName>
@@ -220,25 +205,21 @@
     <pluralLabel>Job Applications</pluralLabel>
     <searchLayouts>
         <customTabListAdditionalFields>Candidate__c</customTabListAdditionalFields>
-        <customTabListAdditionalFields>Position__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
         <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
         <customTabListAdditionalFields>OWNER.FIRST_NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>OWNER.LAST_NAME</customTabListAdditionalFields>
         <lookupDialogsAdditionalFields>Candidate__c</lookupDialogsAdditionalFields>
-        <lookupDialogsAdditionalFields>Position__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>CREATED_DATE</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>OWNER.FIRST_NAME</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>OWNER.LAST_NAME</lookupDialogsAdditionalFields>
         <searchFilterFields>NAME</searchFilterFields>
         <searchFilterFields>Candidate__c</searchFilterFields>
-        <searchFilterFields>Position__c</searchFilterFields>
         <searchFilterFields>CREATED_DATE</searchFilterFields>
         <searchFilterFields>OWNER.FIRST_NAME</searchFilterFields>
         <searchFilterFields>OWNER.LAST_NAME</searchFilterFields>
         <searchResultsAdditionalFields>Candidate__c</searchResultsAdditionalFields>
-        <searchResultsAdditionalFields>Position__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>OWNER.FIRST_NAME</searchResultsAdditionalFields>
