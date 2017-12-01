@@ -281,6 +281,7 @@
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Interviewer</label>
+    <license>Salesforce</license>
     <objectPermissions>
         <allowCreate>false</allowCreate>
         <allowDelete>false</allowDelete>

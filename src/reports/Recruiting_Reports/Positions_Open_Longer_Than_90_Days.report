@@ -23,6 +23,7 @@
     <filter>
         <criteriaItems>
             <column>Position__c.Days_Open__c</column>
+            <isUnlocked>true</isUnlocked>
             <operator>greaterThan</operator>
             <value>90</value>
         </criteriaItems>

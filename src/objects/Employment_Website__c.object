@@ -43,9 +43,10 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <description>Represents an interviewer&apos;s assessment of a particular candidate</description>
+    <description>Information about a particular employment website</description>
     <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
@@ -53,80 +54,50 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>Assessment__c</fullName>
+        <fullName>Maximum_Budget__c</fullName>
         <externalId>false</externalId>
-        <label>Assessment</label>
-        <length>32768</length>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>LongTextArea</type>
-        <visibleLines>6</visibleLines>
-    </fields>
-    <fields>
-        <fullName>Candidate__c</fullName>
-        <externalId>false</externalId>
-        <formula>$User.Alias</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Candidate</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Job_Application__c</fullName>
-        <externalId>false</externalId>
-        <label>Job Application</label>
-        <referenceTo>Job_Application__c</referenceTo>
-        <relationshipLabel>Reviews</relationshipLabel>
-        <relationshipName>Reviews</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
-    </fields>
-    <fields>
-        <fullName>Position__c</fullName>
-        <externalId>false</externalId>
-        <formula>$User.Alias</formula>
-        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-        <label>Position</label>
-        <required>false</required>
-        <trackHistory>false</trackHistory>
-        <trackTrending>false</trackTrending>
-        <type>Text</type>
-        <unique>false</unique>
-    </fields>
-    <fields>
-        <fullName>Rating__c</fullName>
-        <externalId>false</externalId>
-        <inlineHelpText>Enter a 1-5 rating of the candidate.</inlineHelpText>
-        <label>Rating</label>
-        <precision>1</precision>
+        <label>Maximum Budget</label>
+        <precision>8</precision>
         <required>true</required>
-        <scale>0</scale>
+        <scale>2</scale>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Number</type>
-        <unique>false</unique>
+        <type>Currency</type>
     </fields>
-    <label>Review</label>
+    <fields>
+        <fullName>Price_Per_Post__c</fullName>
+        <externalId>false</externalId>
+        <label>Price Per Post</label>
+        <precision>7</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Web_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Web Address</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <label>Employment Website</label>
     <listViews>
         <fullName>All</fullName>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
     <nameField>
-        <displayFormat>R-{000000}</displayFormat>
-        <label>Review Name</label>
+        <label>Employment Website Name</label>
         <trackHistory>false</trackHistory>
-        <type>AutoNumber</type>
+        <type>Text</type>
     </nameField>
-    <pluralLabel>Reviews</pluralLabel>
+    <pluralLabel>Employment Websites</pluralLabel>
     <searchLayouts/>
-    <sharingModel>ControlledByParent</sharingModel>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
     <visibility>Public</visibility>
 </CustomObject>

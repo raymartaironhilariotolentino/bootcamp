@@ -87,6 +87,7 @@ most new or open positions by region?</description>
     <filter>
         <criteriaItems>
             <column>Position__c.Status__c</column>
+            <isUnlocked>true</isUnlocked>
             <operator>equals</operator>
             <value>New Position,Pending Approval,Open - Approved</value>
         </criteriaItems>

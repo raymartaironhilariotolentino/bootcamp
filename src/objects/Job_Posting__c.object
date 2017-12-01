@@ -43,50 +43,59 @@
     <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
-    <enableActivities>false</enableActivities>
+    <description>Represents the junction object between a position
+and an employment website</description>
+    <enableActivities>true</enableActivities>
     <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
     <enableFeeds>false</enableFeeds>
-    <enableHistory>false</enableHistory>
+    <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
     <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
-        <fullName>Employee__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
+        <fullName>Employment_Website__c</fullName>
         <externalId>false</externalId>
-        <label>Employee</label>
-        <referenceTo>User</referenceTo>
-        <relationshipName>Interviewers</relationshipName>
-        <required>false</required>
+        <label>Employment Website</label>
+        <referenceTo>Employment_Website__c</referenceTo>
+        <relationshipLabel>Positions</relationshipLabel>
+        <relationshipName>Job_Postings</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Lookup</type>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
         <fullName>Position__c</fullName>
-        <deleteConstraint>SetNull</deleteConstraint>
         <externalId>false</externalId>
         <label>Position</label>
         <referenceTo>Position__c</referenceTo>
-        <relationshipLabel>Interviewers</relationshipLabel>
-        <relationshipName>Interviewers</relationshipName>
-        <required>false</required>
+        <relationshipLabel>Employment Websites</relationshipLabel>
+        <relationshipName>Job_Postings</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
-        <type>Lookup</type>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
-    <label>Interviewer</label>
+    <label>Job Posting</label>
     <listViews>
         <fullName>All</fullName>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>
     <nameField>
-        <label>Interviewer Name</label>
-        <type>Text</type>
+        <displayFormat>JP-{00000}</displayFormat>
+        <label>Job Posting Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Interviewers</pluralLabel>
+    <pluralLabel>Job Postings</pluralLabel>
     <searchLayouts/>
-    <sharingModel>Private</sharingModel>
-    <startsWith>Vowel</startsWith>
+    <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
