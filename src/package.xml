@@ -166,7 +166,7 @@
         <members>Position__c.Set_Status_to_Closed_Not_Approved</members>
         <members>Position__c.Set_Status_to_Open_Approved</members>
         <members>Position__c.Set_Status_to_Pending_Approval</members>
-        <name>WorkflowFieldUpdate</name>
+        <name>WorkflowFieldUpdate</name> 
     </types>
     <version>31.0</version> 
 </Package>
