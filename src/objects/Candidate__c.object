@@ -21,6 +21,10 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -40,7 +44,6 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
-    <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>Candidate_compact_layout</compactLayoutAssignment>
     <compactLayouts>
         <fullName>Candidate_compact_layout</fullName>
@@ -57,7 +60,6 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
-    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
@@ -106,41 +108,34 @@
         <fullName>Education__c</fullName>
         <externalId>false</externalId>
         <label>Education</label>
+        <picklist>
+            <picklistValues>
+                <fullName>HS Diploma</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BA/BS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MA/MS/MBA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Ph.D.</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Post Doc</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
         <required>false</required>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>HS Diploma</fullName>
-                    <default>true</default>
-                    <label>HS Diploma</label>
-                </value>
-                <value>
-                    <fullName>BA/BS</fullName>
-                    <default>false</default>
-                    <label>BA/BS</label>
-                </value>
-                <value>
-                    <fullName>MA/MS/MBA</fullName>
-                    <default>false</default>
-                    <label>MA/MS/MBA</label>
-                </value>
-                <value>
-                    <fullName>Ph.D.</fullName>
-                    <default>false</default>
-                    <label>Ph.D.</label>
-                </value>
-                <value>
-                    <fullName>Post Doc</fullName>
-                    <default>false</default>
-                    <label>Post Doc</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>Email__c</fullName>
@@ -290,5 +285,4 @@
     <pluralLabel>Candidates</pluralLabel>
     <searchLayouts/>
     <sharingModel>Private</sharingModel>
-    <visibility>Public</visibility>
 </CustomObject>

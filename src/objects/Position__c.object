@@ -21,6 +21,10 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -40,7 +44,6 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
-    <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>Position</compactLayoutAssignment>
     <compactLayouts>
         <fullName>Position</fullName>
@@ -58,7 +61,6 @@ the open job positions at our company.</description>
     <enableFeeds>true</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
-    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
@@ -122,47 +124,39 @@ the open job positions at our company.</description>
         <fullName>Functional_Area__c</fullName>
         <externalId>false</externalId>
         <label>Functional Area</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Information Technology</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Miscellaneous</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Retail Operations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Warehousing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>true</sorted>
+        </picklist>
         <required>true</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>true</sorted>
-                <value>
-                    <fullName>Finance</fullName>
-                    <default>false</default>
-                    <label>Finance</label>
-                </value>
-                <value>
-                    <fullName>Human Resources</fullName>
-                    <default>false</default>
-                    <label>Human Resources</label>
-                </value>
-                <value>
-                    <fullName>Information Technology</fullName>
-                    <default>false</default>
-                    <label>Information Technology</label>
-                </value>
-                <value>
-                    <fullName>Miscellaneous</fullName>
-                    <default>false</default>
-                    <label>Miscellaneous</label>
-                </value>
-                <value>
-                    <fullName>Retail Operations</fullName>
-                    <default>false</default>
-                    <label>Retail Operations</label>
-                </value>
-                <value>
-                    <fullName>Warehousing</fullName>
-                    <default>false</default>
-                    <label>Warehousing</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>Hire_By__c</fullName>
@@ -224,278 +218,182 @@ the open job positions at our company.</description>
         <fullName>Job_Level__c</fullName>
         <externalId>false</externalId>
         <label>Job Level</label>
+        <picklist>
+            <controllingField>Functional_Area__c</controllingField>
+            <picklistValues>
+                <fullName>FN-100</fullName>
+                <default>false</default>
+                <controllingFieldValues>Finance</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FN-200</fullName>
+                <default>false</default>
+                <controllingFieldValues>Finance</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FN-300</fullName>
+                <default>false</default>
+                <controllingFieldValues>Finance</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>FN-400</fullName>
+                <default>false</default>
+                <controllingFieldValues>Finance</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HR-100</fullName>
+                <default>false</default>
+                <controllingFieldValues>Human Resources</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HR-200</fullName>
+                <default>false</default>
+                <controllingFieldValues>Human Resources</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HR-300</fullName>
+                <default>false</default>
+                <controllingFieldValues>Human Resources</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>HR-400</fullName>
+                <default>false</default>
+                <controllingFieldValues>Human Resources</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IT-100</fullName>
+                <default>false</default>
+                <controllingFieldValues>Information Technology</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IT-200</fullName>
+                <default>false</default>
+                <controllingFieldValues>Information Technology</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IT-300</fullName>
+                <default>false</default>
+                <controllingFieldValues>Information Technology</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IT-400</fullName>
+                <default>false</default>
+                <controllingFieldValues>Information Technology</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MC-100</fullName>
+                <default>false</default>
+                <controllingFieldValues>Miscellaneous</controllingFieldValues>
+                <controllingFieldValues>Warehousing</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MC-200</fullName>
+                <default>false</default>
+                <controllingFieldValues>Miscellaneous</controllingFieldValues>
+                <controllingFieldValues>Warehousing</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MC-300</fullName>
+                <default>false</default>
+                <controllingFieldValues>Miscellaneous</controllingFieldValues>
+                <controllingFieldValues>Warehousing</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MC-400</fullName>
+                <default>false</default>
+                <controllingFieldValues>Miscellaneous</controllingFieldValues>
+                <controllingFieldValues>Warehousing</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RO-100</fullName>
+                <default>false</default>
+                <controllingFieldValues>Retail Operations</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RO-200</fullName>
+                <default>false</default>
+                <controllingFieldValues>Retail Operations</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RO-300</fullName>
+                <default>false</default>
+                <controllingFieldValues>Retail Operations</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RO-400</fullName>
+                <default>false</default>
+                <controllingFieldValues>Retail Operations</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WH-100</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WH-200</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WH-300</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WH-400</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>true</sorted>
+        </picklist>
         <required>true</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
-        <valueSet>
-            <controllingField>Functional_Area__c</controllingField>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>true</sorted>
-                <value>
-                    <fullName>FN-100</fullName>
-                    <default>false</default>
-                    <label>FN-100</label>
-                </value>
-                <value>
-                    <fullName>FN-200</fullName>
-                    <default>false</default>
-                    <label>FN-200</label>
-                </value>
-                <value>
-                    <fullName>FN-300</fullName>
-                    <default>false</default>
-                    <label>FN-300</label>
-                </value>
-                <value>
-                    <fullName>FN-400</fullName>
-                    <default>false</default>
-                    <label>FN-400</label>
-                </value>
-                <value>
-                    <fullName>HR-100</fullName>
-                    <default>false</default>
-                    <label>HR-100</label>
-                </value>
-                <value>
-                    <fullName>HR-200</fullName>
-                    <default>false</default>
-                    <label>HR-200</label>
-                </value>
-                <value>
-                    <fullName>HR-300</fullName>
-                    <default>false</default>
-                    <label>HR-300</label>
-                </value>
-                <value>
-                    <fullName>HR-400</fullName>
-                    <default>false</default>
-                    <label>HR-400</label>
-                </value>
-                <value>
-                    <fullName>IT-100</fullName>
-                    <default>false</default>
-                    <label>IT-100</label>
-                </value>
-                <value>
-                    <fullName>IT-200</fullName>
-                    <default>false</default>
-                    <label>IT-200</label>
-                </value>
-                <value>
-                    <fullName>IT-300</fullName>
-                    <default>false</default>
-                    <label>IT-300</label>
-                </value>
-                <value>
-                    <fullName>IT-400</fullName>
-                    <default>false</default>
-                    <label>IT-400</label>
-                </value>
-                <value>
-                    <fullName>MC-100</fullName>
-                    <default>false</default>
-                    <label>MC-100</label>
-                </value>
-                <value>
-                    <fullName>MC-200</fullName>
-                    <default>false</default>
-                    <label>MC-200</label>
-                </value>
-                <value>
-                    <fullName>MC-300</fullName>
-                    <default>false</default>
-                    <label>MC-300</label>
-                </value>
-                <value>
-                    <fullName>MC-400</fullName>
-                    <default>false</default>
-                    <label>MC-400</label>
-                </value>
-                <value>
-                    <fullName>RO-100</fullName>
-                    <default>false</default>
-                    <label>RO-100</label>
-                </value>
-                <value>
-                    <fullName>RO-200</fullName>
-                    <default>false</default>
-                    <label>RO-200</label>
-                </value>
-                <value>
-                    <fullName>RO-300</fullName>
-                    <default>false</default>
-                    <label>RO-300</label>
-                </value>
-                <value>
-                    <fullName>RO-400</fullName>
-                    <default>false</default>
-                    <label>RO-400</label>
-                </value>
-                <value>
-                    <fullName>WH-100</fullName>
-                    <default>false</default>
-                    <label>WH-100</label>
-                </value>
-                <value>
-                    <fullName>WH-200</fullName>
-                    <default>false</default>
-                    <label>WH-200</label>
-                </value>
-                <value>
-                    <fullName>WH-300</fullName>
-                    <default>false</default>
-                    <label>WH-300</label>
-                </value>
-                <value>
-                    <fullName>WH-400</fullName>
-                    <default>false</default>
-                    <label>WH-400</label>
-                </value>
-            </valueSetDefinition>
-            <valueSettings>
-                <controllingFieldValue>Finance</controllingFieldValue>
-                <valueName>FN-100</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Finance</controllingFieldValue>
-                <valueName>FN-200</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Finance</controllingFieldValue>
-                <valueName>FN-300</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Finance</controllingFieldValue>
-                <valueName>FN-400</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Human Resources</controllingFieldValue>
-                <valueName>HR-100</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Human Resources</controllingFieldValue>
-                <valueName>HR-200</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Human Resources</controllingFieldValue>
-                <valueName>HR-300</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Human Resources</controllingFieldValue>
-                <valueName>HR-400</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Information Technology</controllingFieldValue>
-                <valueName>IT-100</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Information Technology</controllingFieldValue>
-                <valueName>IT-200</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Information Technology</controllingFieldValue>
-                <valueName>IT-300</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Information Technology</controllingFieldValue>
-                <valueName>IT-400</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Miscellaneous</controllingFieldValue>
-                <controllingFieldValue>Warehousing</controllingFieldValue>
-                <valueName>MC-100</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Miscellaneous</controllingFieldValue>
-                <controllingFieldValue>Warehousing</controllingFieldValue>
-                <valueName>MC-200</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Miscellaneous</controllingFieldValue>
-                <controllingFieldValue>Warehousing</controllingFieldValue>
-                <valueName>MC-300</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Miscellaneous</controllingFieldValue>
-                <controllingFieldValue>Warehousing</controllingFieldValue>
-                <valueName>MC-400</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Retail Operations</controllingFieldValue>
-                <valueName>RO-100</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Retail Operations</controllingFieldValue>
-                <valueName>RO-200</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Retail Operations</controllingFieldValue>
-                <valueName>RO-300</valueName>
-            </valueSettings>
-            <valueSettings>
-                <controllingFieldValue>Retail Operations</controllingFieldValue>
-                <valueName>RO-400</valueName>
-            </valueSettings>
-        </valueSet>
     </fields>
     <fields>
         <fullName>Location__c</fullName>
         <externalId>false</externalId>
         <label>Location</label>
+        <picklist>
+            <picklistValues>
+                <fullName>San Francisco, CA</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Austin, TX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Boulder, CO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>London, England</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New York, NY</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Mumbai, India</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sydney, Australia</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tokyo, Japan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
         <required>true</required>
         <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>San Francisco, CA</fullName>
-                    <default>true</default>
-                    <label>San Francisco, CA</label>
-                </value>
-                <value>
-                    <fullName>Austin, TX</fullName>
-                    <default>false</default>
-                    <label>Austin, TX</label>
-                </value>
-                <value>
-                    <fullName>Boulder, CO</fullName>
-                    <default>false</default>
-                    <label>Boulder, CO</label>
-                </value>
-                <value>
-                    <fullName>London, England</fullName>
-                    <default>false</default>
-                    <label>London, England</label>
-                </value>
-                <value>
-                    <fullName>New York, NY</fullName>
-                    <default>false</default>
-                    <label>New York, NY</label>
-                </value>
-                <value>
-                    <fullName>Mumbai, India</fullName>
-                    <default>false</default>
-                    <label>Mumbai, India</label>
-                </value>
-                <value>
-                    <fullName>Sydney, Australia</fullName>
-                    <default>false</default>
-                    <label>Sydney, Australia</label>
-                </value>
-                <value>
-                    <fullName>Tokyo, Japan</fullName>
-                    <default>false</default>
-                    <label>Tokyo, Japan</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>Max_Pay__c</fullName>
@@ -557,47 +455,39 @@ the open job positions at our company.</description>
         <fullName>Status__c</fullName>
         <externalId>false</externalId>
         <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>New Position</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pending Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Open - Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed - Filled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed - Not Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed - Canceled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
         <required>true</required>
         <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
-        <valueSet>
-            <restricted>true</restricted>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>New Position</fullName>
-                    <default>true</default>
-                    <label>New Position</label>
-                </value>
-                <value>
-                    <fullName>Pending Approval</fullName>
-                    <default>false</default>
-                    <label>Pending Approval</label>
-                </value>
-                <value>
-                    <fullName>Open - Approved</fullName>
-                    <default>false</default>
-                    <label>Open - Approved</label>
-                </value>
-                <value>
-                    <fullName>Closed - Filled</fullName>
-                    <default>false</default>
-                    <label>Closed - Filled</label>
-                </value>
-                <value>
-                    <fullName>Closed - Not Approved</fullName>
-                    <default>false</default>
-                    <label>Closed - Not Approved</label>
-                </value>
-                <value>
-                    <fullName>Closed - Canceled</fullName>
-                    <default>false</default>
-                    <label>Closed - Canceled</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <fields>
         <fullName>Travel_Required__c</fullName>
@@ -613,36 +503,30 @@ the open job positions at our company.</description>
         <fullName>Type__c</fullName>
         <externalId>false</externalId>
         <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Full Time</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Part Time</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contractor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
         <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
-        <valueSet>
-            <valueSetDefinition>
-                <sorted>false</sorted>
-                <value>
-                    <fullName>Full Time</fullName>
-                    <default>false</default>
-                    <label>Full Time</label>
-                </value>
-                <value>
-                    <fullName>Part Time</fullName>
-                    <default>false</default>
-                    <label>Part Time</label>
-                </value>
-                <value>
-                    <fullName>Internship</fullName>
-                    <default>false</default>
-                    <label>Internship</label>
-                </value>
-                <value>
-                    <fullName>Contractor</fullName>
-                    <default>false</default>
-                    <label>Contractor</label>
-                </value>
-            </valueSetDefinition>
-        </valueSet>
     </fields>
     <label>Position</label>
     <listViews>
@@ -1083,5 +967,4 @@ the open job positions at our company.</description>
         <errorDisplayField>Min_Pay__c</errorDisplayField>
         <errorMessage>Min Pay cannot exceed Max Pay.</errorMessage>
     </validationRules>
-    <visibility>Public</visibility>
 </CustomObject>
