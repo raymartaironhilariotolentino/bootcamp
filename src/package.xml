@@ -43,8 +43,15 @@
         <name>CustomTab</name>
     </types>
     <types>
+        <members>Recruiting_Dashboards</members>
         <members>Recruiting_Dashboards/Recruiting_Dashboard</members>
         <name>Dashboard</name>
+    </types>
+    <types>
+        <members>sample_templates</members>
+        <members>sample_templates/Recruiting_App_New_Position_Alert</members>
+        <members>sample_templates/Recruiting_App_New_Position_Requires_Approval</members>
+        <name>EmailTemplate</name>
     </types>
     <types>
         <members>Assign_Position_to_Recruiter</members>
@@ -65,6 +72,8 @@
         <members>Applicant__c-Applicant Layout</members>
         <members>Candidate__c-Candidate Layout</members>
         <members>Employment_Website__c-Employment Website Layout</members>
+        <members>G_Position__c-G-Position Layout</members>
+        <members>Global-Recruiter Layout</members>
         <members>Interviewer__c-Interviewer Layout</members>
         <members>Job_Application__c-Job Application Layout</members>
         <members>Job_Posting__c-Job Posting Layout</members>
@@ -105,6 +114,16 @@
         <name>Queue</name>
     </types>
     <types>
+        <members>Candidate__c.New_Application</members>
+        <members>Employment_Website__c.New_Posting</members>
+        <members>Job_Application__c.New_Review</members>
+        <members>New_Application</members>
+        <members>New_Candidate</members>
+        <members>New_Standard_Position</members>
+        <members>Position__c.New_Posting</members>
+        <name>QuickAction</name>
+    </types>
+    <types>
         <members>Position__c.IT_Position</members>
         <members>Position__c.Standard_Position</members>
         <name>RecordType</name>
@@ -121,8 +140,10 @@
         <name>RecordsType</name>
     </types>
     <types>
+        <members>Recruiting_Reports</members>
         <members>Recruiting_Reports/Avg_Days_to_Hire_With_and_Without_Travel</members>
         <members>Recruiting_Reports/Open_Positions_by_Functional_Area_and_Re</members>
+        <members>Recruiting_Reports/Open_filled_Cancelled_positions</members>
         <members>Recruiting_Reports/Positions_Open_Longer_Than_90_Days</members>
         <name>Report</name>
     </types>
@@ -168,5 +189,5 @@
         <members>Position__c.Set_Status_to_Pending_Approval</members>
         <name>WorkflowFieldUpdate</name>
     </types>
-    <version>31.0</version>
+    <version>40.0</version>
 </Package>

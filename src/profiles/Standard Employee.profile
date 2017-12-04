@@ -291,6 +291,9 @@
         <layout>Employment_Website__c-Employment Website Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>G_Position__c-G-Position Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Interviewer__c-Interviewer Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -468,6 +471,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ListEmailSend</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>MassInlineEdit</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

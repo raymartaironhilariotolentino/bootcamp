@@ -9,7 +9,7 @@
             <type>roleSubordinates</type>
         </recipients>
         <senderType>CurrentUser</senderType>
-        <template>unfiled$public/Recruiting_App_New_Position_Alert</template>
+        <template>sample_templates/Recruiting_App_New_Position_Alert</template>
     </alerts>
     <fieldUpdates>
         <fullName>Set_Close_Date_to_Today</fullName>
