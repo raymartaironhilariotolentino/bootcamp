@@ -13,7 +13,6 @@
         <field>Status__c</field>
         <literalValue>New Position</literalValue>
     </fieldOverrides>
-    <optionsCreateFeedItem>true</optionsCreateFeedItem>
     <quickActionLayout>
         <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
         <quickActionLayoutColumns>

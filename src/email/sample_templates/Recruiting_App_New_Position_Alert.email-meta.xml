@@ -7,5 +7,4 @@
     <style>none</style>
     <subject>New Open Position Alert: {!Position__c.Name}</subject>
     <type>text</type>
-    <uiType>Aloha</uiType>
 </EmailTemplate>

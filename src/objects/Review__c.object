@@ -21,6 +21,10 @@
         <type>Default</type>
     </actionOverrides>
     <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>List</actionName>
         <type>Default</type>
     </actionOverrides>
@@ -40,7 +44,6 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
-    <allowInChatterGroups>false</allowInChatterGroups>
     <compactLayoutAssignment>New_Review_CLayout</compactLayoutAssignment>
     <compactLayouts>
         <fullName>New_Review_CLayout</fullName>
@@ -57,7 +60,6 @@
     <enableFeeds>false</enableFeeds>
     <enableHistory>true</enableHistory>
     <enableReports>true</enableReports>
-    <enableSearch>true</enableSearch>
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
@@ -160,5 +162,4 @@ Job_Application__r.Candidate__r.Last_Name__c )</formula>
         <errorDisplayField>Rating__c</errorDisplayField>
         <errorMessage>Invalid rating. Rating must be between 1 and 5.</errorMessage>
     </validationRules>
-    <visibility>Public</visibility>
 </CustomObject>

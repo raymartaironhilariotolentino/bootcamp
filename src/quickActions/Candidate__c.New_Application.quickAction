@@ -5,7 +5,6 @@
         <literalValue>New</literalValue>
     </fieldOverrides>
     <label>New Application</label>
-    <optionsCreateFeedItem>true</optionsCreateFeedItem>
     <quickActionLayout>
         <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
         <quickActionLayoutColumns>
