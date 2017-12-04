@@ -189,5 +189,5 @@
         <members>Position__c.Set_Status_to_Pending_Approval</members>
         <name>WorkflowFieldUpdate</name>
     </types>
-    <version>40.0</version>
+    <version>31.0</version>
 </Package>
