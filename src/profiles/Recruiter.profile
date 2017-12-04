@@ -139,7 +139,12 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Job_Application__c.Average_Rating__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Job_Application__c.Candidate_Name__c</field>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -154,7 +159,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Job_Application__c.Number_of_Reviews__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -174,7 +179,7 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>Job_Application__c.Total_Rating__c</field>
-        <readable>false</readable>
+        <readable>true</readable>
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
@@ -295,11 +300,11 @@
         <layout>Job_Posting__c-Job Posting Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
-        <layout>Position__c-Position Layout</layout>
+        <layout>Position__c-IT Position Layout</layout>
+        <recordType>Position__c.IT_Position</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Position__c-Position Layout</layout>
-        <recordType>Position__c.IT_Position</recordType>
     </layoutAssignments>
     <layoutAssignments>
         <layout>Position__c-Position Layout</layout>
@@ -517,6 +522,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ListEmailSend</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>MassInlineEdit</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

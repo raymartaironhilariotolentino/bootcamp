@@ -44,7 +44,15 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>New_Review_CLayout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>New_Review_CLayout</fullName>
+        <fields>Name</fields>
+        <fields>Rating__c</fields>
+        <fields>Candidate__c</fields>
+        <fields>CreatedById</fields>
+        <label>New Review CLayout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <description>Represents an interviewer&apos;s assessment of a particular candidate</description>
     <enableActivities>true</enableActivities>
@@ -67,7 +75,11 @@
     <fields>
         <fullName>Candidate__c</fullName>
         <externalId>false</externalId>
-        <formula>$User.Alias</formula>
+        <formula>HYPERLINK( Job_Application__r.Candidate__r.Id ,  Job_Application__r.Candidate__r.First_Name__c 
+ &amp; 
+&quot; &quot;
+ &amp; 
+Job_Application__r.Candidate__r.Last_Name__c )</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Candidate</label>
         <required>false</required>
@@ -93,7 +105,7 @@
     <fields>
         <fullName>Position__c</fullName>
         <externalId>false</externalId>
-        <formula>$User.Alias</formula>
+        <formula>Job_Application__r.Position__r.Name</formula>
         <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
         <label>Position</label>
         <required>false</required>
@@ -128,6 +140,26 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Reviews</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Rating__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Job_Application__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Candidate__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Position__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATED_DATE</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Rating__c</searchFilterFields>
+        <searchFilterFields>Job_Application__c</searchFilterFields>
+        <searchFilterFields>Candidate__c</searchFilterFields>
+        <searchFilterFields>Position__c</searchFilterFields>
+        <searchFilterFields>CREATED_DATE</searchFilterFields>
+    </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Rating_Scale_Rule</fullName>
+        <active>true</active>
+        <description>Rating must be between 1 and 5.</description>
+        <errorConditionFormula>( Rating__c  &lt; 1 || Rating__c &gt; 5)</errorConditionFormula>
+        <errorDisplayField>Rating__c</errorDisplayField>
+        <errorMessage>Invalid rating. Rating must be between 1 and 5.</errorMessage>
+    </validationRules>
 </CustomObject>

@@ -23,6 +23,24 @@
             <title>Open Positions by Functional Area</title>
             <useReportChart>false</useReportChart>
         </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <header>Positions by Status</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Recruiting_Reports/Open_filled_Cancelled_positions</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Positions by Status</title>
+            <useReportChart>false</useReportChart>
+        </components>
     </leftSection>
     <middleSection>
         <columnSize>Medium</columnSize>
@@ -42,6 +60,24 @@
             <showTotal>true</showTotal>
             <showValues>false</showValues>
             <title>Positions Open Longer Than 90 Days</title>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <header>Job Postings</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>Recruiting_Reports/Job_postings</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Job Postings</title>
+            <useReportChart>false</useReportChart>
         </components>
     </middleSection>
     <rightSection>

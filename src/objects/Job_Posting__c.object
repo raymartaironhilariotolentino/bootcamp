@@ -44,7 +44,14 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
-    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <compactLayoutAssignment>Job_Posting_CLayout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Job_Posting_CLayout</fullName>
+        <fields>Name</fields>
+        <fields>Employment_Website__c</fields>
+        <fields>Position__c</fields>
+        <label>Job Posting CLayout</label>
+    </compactLayouts>
     <deploymentStatus>Deployed</deploymentStatus>
     <description>Represents the junction object between a position
 and an employment website</description>
@@ -96,6 +103,9 @@ and an employment website</description>
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Job Postings</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <customTabListAdditionalFields>Employment_Website__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Position__c</customTabListAdditionalFields>
+    </searchLayouts>
     <sharingModel>ControlledByParent</sharingModel>
 </CustomObject>

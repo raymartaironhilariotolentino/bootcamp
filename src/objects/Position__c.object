@@ -44,15 +44,7 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
-    <compactLayoutAssignment>Position</compactLayoutAssignment>
-    <compactLayouts>
-        <fullName>Position</fullName>
-        <fields>Name</fields>
-        <fields>Status__c</fields>
-        <fields>Hire_By__c</fields>
-        <fields>Job_Level__c</fields>
-        <label>Position</label>
-    </compactLayouts>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <deploymentStatus>Deployed</deploymentStatus>
     <description>This object stores information about
 the open job positions at our company.</description>
@@ -531,8 +523,38 @@ the open job positions at our company.</description>
     <label>Position</label>
     <listViews>
         <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>OWNER.ALIAS</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Open_Positions</fullName>
+        <columns>NAME</columns>
+        <columns>Open_Date__c</columns>
+        <columns>Min_Pay__c</columns>
+        <columns>Max_Pay__c</columns>
+        <columns>Hiring_Manager__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open - Approved</value>
+        </filters>
+        <label>Open Positions</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Unclaimed_Positions_Queue_Position</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Unclaimed Positions Queue</label>
+        <queue>Unclaimed_Positions_Queue</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
     </listViews>
     <nameField>
         <label>Position Name</label>
@@ -546,14 +568,13 @@ the open job positions at our company.</description>
     <recordTypes>
         <fullName>IT_Position</fullName>
         <active>true</active>
-        <compactLayoutAssignment>Position</compactLayoutAssignment>
         <description>Record type for all IT positions</description>
         <label>IT Position</label>
         <picklistValues>
             <picklist>Functional_Area__c</picklist>
             <values>
                 <fullName>Information Technology</fullName>
-                <default>false</default>
+                <default>true</default>
             </values>
         </picklistValues>
         <picklistValues>
@@ -740,7 +761,6 @@ the open job positions at our company.</description>
     <recordTypes>
         <fullName>Standard_Position</fullName>
         <active>true</active>
-        <compactLayoutAssignment>Position</compactLayoutAssignment>
         <description>Record type for all non-IT positions</description>
         <label>Standard Position</label>
         <picklistValues>
@@ -947,8 +967,42 @@ the open job positions at our company.</description>
             </values>
         </picklistValues>
     </recordTypes>
-    <searchLayouts/>
-    <sharingModel>Private</sharingModel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Location__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Functional_Area__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Job_Level__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Hiring_Manager__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Open_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Close_Date__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Location__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Functional_Area__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Job_Level__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Hiring_Manager__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Open_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Close_Date__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Location__c</searchFilterFields>
+        <searchFilterFields>Functional_Area__c</searchFilterFields>
+        <searchFilterFields>Job_Level__c</searchFilterFields>
+        <searchFilterFields>Type__c</searchFilterFields>
+        <searchFilterFields>Hiring_Manager__c</searchFilterFields>
+        <searchFilterFields>Status__c</searchFilterFields>
+        <searchFilterFields>Open_Date__c</searchFilterFields>
+        <searchFilterFields>Close_Date__c</searchFilterFields>
+        <searchResultsAdditionalFields>Location__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Functional_Area__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Job_Level__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Hiring_Manager__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Open_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Close_Date__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
     <validationRules>
         <fullName>Close_Date_Rule</fullName>
         <active>true</active>
@@ -966,5 +1020,12 @@ the open job positions at our company.</description>
         <errorConditionFormula>Min_Pay__c  &gt;  Max_Pay__c</errorConditionFormula>
         <errorDisplayField>Min_Pay__c</errorDisplayField>
         <errorMessage>Min Pay cannot exceed Max Pay.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>New_position</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(( CreatedDate   =   LastModifiedDate ) , NOT( ISPICKVAL( Status__c , &apos;New Position&apos; ) ))</errorConditionFormula>
+        <errorDisplayField>Status__c</errorDisplayField>
+        <errorMessage>Status must be &apos;New Position&apos; for newly created position.</errorMessage>
     </validationRules>
 </CustomObject>
